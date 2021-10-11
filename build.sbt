@@ -14,13 +14,13 @@ lazy val boxTables = crossProject(JSPlatform, JVMPlatform)
     crossScalaVersions := Seq("2.12.10", "2.13.1"),
     resolvers += Resolver.sonatypeRepo("releases"),
     addCompilerPlugin(
-      "org.typelevel" %% "kind-projector" % "0.11.0" cross CrossVersion.full
+      "org.typelevel" %% "kind-projector" % "0.13.2" cross CrossVersion.full
     ),
     libraryDependencies ++= Seq(
-      "com.chuusai" %%% "shapeless" % "2.3.3",
-      "org.typelevel" %%% "cats-core" % "2.1.0",
-      "org.typelevel" %%% "cats-laws" % "2.1.0" % Test,
-      "org.typelevel" %% "discipline-scalatest" % "1.0.1",
+      "com.chuusai" %%% "shapeless" % "2.3.7",
+      "org.typelevel" %%% "cats-core" % "2.6.1",
+      "org.typelevel" %%% "cats-laws" % "2.6.1" % Test,
+      "org.typelevel" %% "discipline-scalatest" % "2.1.5",
       "org.scalacheck" %%% "scalacheck" % "1.14.3" % Test
     ),
     scalacOptions := Seq(
@@ -88,7 +88,7 @@ lazy val boxTables = crossProject(JSPlatform, JVMPlatform)
     ).filterNot(_.contains("paradise")))
   )
   .jsSettings(
-    libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.0.0-RC3"
+    libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.3.0"
   )
 
 lazy val boxTablesJS = boxTables.js

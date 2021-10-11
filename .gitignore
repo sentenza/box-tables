@@ -1,29 +1,48 @@
-*.class
-*.log
+## sbt
+logs
+target
+/.idea
+/.idea_modules
+/.classpath
+/.gradle
+/.project
+/.settings
+/public/*
 
 # sbt specific
 .cache
 .history
 .lib/
+.bsp/*
 dist/*
-target/
 lib_managed/
 src_managed/
 project/boot/
-project/plugins/project/
 
 # Scala-IDE specific
 .scala_dependencies
 .worksheet
-
-# IntelliJ specific
+.ropeproject
 .idea
 
-# Ensime
-.ensime
-.ensime_cache
+# Temporary
+.netrwhist
+*~
 
-# Metals
+# Vim specific ---
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+._*
+*.swp
+*.swo
+
+# System Files
+.DS_Store
+Thumbs.db%
+
+## Metals
 .metals
 .bloop
-project/metals.sbt
